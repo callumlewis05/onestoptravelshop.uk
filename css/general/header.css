@@ -1,0 +1,35 @@
+/* === Header === */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 80px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  height: 100%;
+  margin: 0 30px;
+}
+
+.brand-logo {
+  width: auto;
+  height: 60px;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: clamp(0.6rem, 1.2vw, 1.4rem);
+  align-items: center;
+}

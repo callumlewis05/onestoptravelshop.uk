@@ -1,0 +1,144 @@
+/* === Hero Section === */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  padding-top: 70px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(2, 6, 23, 0.5),
+      rgba(2, 6, 23, 0.5)
+    ),
+    url("../../img/bg2.png");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+
+.hero-inner {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: clamp(2rem, 6vh, 4rem) 0;
+}
+
+.hero-kicker {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.7rem);
+  letter-spacing: 0.01em;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(2.4rem, 6.5vw, 5rem);
+  line-height: 1.05;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.8rem 1.3rem;
+  border: 1px solid transparent;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease,
+    border-color 160ms ease;
+  will-change: transform;
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 3px;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(2, 6, 23, 0.22);
+}
+.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.32);
+  box-shadow: 0 18px 34px rgba(2, 6, 23, 0.28);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+/* === Why choose one stop travel shop section */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(1.2rem, 5vw, 5rem);
+  align-items: start;
+  margin: 0 2vw;
+}
+
+.benefits {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.15rem;
+}
+
+.benefit {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.benefit-icon {
+  height: 100%;
+  width: 100px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+}
+
+section {
+  padding: 60px 7vw;
+}
+
+/* === Design breakpoints === */
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 10vw;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+}
+
+/* Laptop */
+@media screen and (min-width: 1008px) {
+}

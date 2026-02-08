@@ -1,0 +1,106 @@
+/* === Text Styles === */
+
+@font-face {
+  font-family: "Gloock";
+  src: url("/fonts/Gloock-Regular.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bacasime Antique";
+  src: url("/fonts/BacasimeAntique-Regular.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prata";
+  src: url("/fonts/Prata-Regular.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto";
+  src: url("/fonts/NotoSerif-Regular.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.title-text {
+  font-family: "Gloock", sans-serif;
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 600;
+  color: var(--text-colour);
+  text-align: center;
+}
+
+.subtitle-text {
+  font-family: "Gloock";
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.nav-text {
+  font-family: "Prata";
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-text:hover,
+.nav-text:focus-visible {
+  border-bottom-color: var(--brand);
+  outline: none;
+}
+
+.nav-text.is-active {
+  color: var(--brand);
+  border-bottom-color: var(--brand);
+}
+
+.paragraph-text {
+  font-family: "Noto";
+  font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+  font-weight: 1000;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.section-title {
+  font-family: "Bacasime Antique";
+  margin: 0 0 1.5rem;
+  font-size: clamp(2rem, 4.6vw, 3.2rem);
+  line-height: 1.08;
+  font-weight: 100;
+  border-bottom: 2px solid rgba(31, 111, 91, 0.75);
+  padding-bottom: 0.6rem;
+  display: inline-block;
+  text-wrap: balance;
+}
+
+.section-title--small {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+}
+
+.link-text {
+  font-family: "Noto";
+  font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+  font-weight: 1000;
+  margin: 0 0 20px;
+  line-height: 1.2;
+  /* border-bottom: 2px solid var(--brand); */
+  text-decoration: underline var(--brand);
+  transition: color .2s ease-in-out;
+}
+
+.link-text:hover {
+  color: var(--brand);
+  transition: color .2s ease-in-out;
+}

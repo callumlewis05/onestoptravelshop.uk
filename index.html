@@ -1,28 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Under Development</title>
-  <meta name="description" content="This website is currently under development. Please check back soon." />
-  <meta property="og:title" content="Under Development" />
-  <meta property="og:description" content="This website is currently under development. Please check back soon." />
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main class="card" role="main" aria-labelledby="headline">
-    <h1 id="headline">This website is currently under development</h1>
-    <p>Please check back soon.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>One Stop Travel Shop</title>
+    <meta name="description" content="Relax, let us do the research and find you the best holiday." />
 
-    <div class="pill" role="status" aria-live="polite">
-      Working on it
-      <span class="dots" aria-hidden="true">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </span>
-    </div>
-  </main>
-</body>
+    <!-- General css -->
+    <link rel="stylesheet" href="css/general/reset.css">
+    <link rel="stylesheet" href="css/general/text.css">
+    <link rel="stylesheet" href="css/general/header.css">
+
+    <!-- Page specific css -->
+    <link rel="stylesheet" href="css/pages/home.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="One Stop Travel Shop, home">
+          <img
+            class="brand-logo"
+            src="img/logo.png"
+            width="220"
+            height="80"
+            alt="One Stop Travel Shop logo"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-text is-active" href="/" aria-current="page">Home</a>
+          <a class="nav-text" href="/about.html">About Us</a>
+          <a class="nav-text" href="/holidays.html">Our Holidays</a>
+          <a class="nav-text" href="/contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <p class="hero-title title-text">Welcome to</p>
+          <h1 id="hero-title" class="hero-title title-text">One Stop Travel Shop</h1>
+          <p class="hero-subtitle subtitle-text">Relax, let us do the research and find you the best holiday!</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary subtitle-text" href="/contact.html">Book now!</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="why" id="about" aria-labelledby="why-title">
+        <div class="container">
+          <h2 id="why-title" class="section-title">
+            Why Choose One Stop Travel Shop<br />
+            for your Holiday?
+          </h2>
+
+          <div class="why-grid">
+            <article class="why-copy">
+              <p class="paragraph-text">
+                Book with Confidence!
+                <br><br>
+                We are a Member of <a class="link-text" href="https://www.abta.com/">ABTA</a> which means you have the benefit of ABTA's assistance and Code of Conduct.
+                <br><br>
+                All the package and Flight-Plus holidays we sell are covered by a scheme protecting your money if the
+                supplier fails. Other services such as hotels or flights on their own may not be protected and you should
+                ask us what protection is available.
+                <br><br>
+                One Stop Travel Shop is a member of Experience It Now Travel who are an Accredited Body Member of Hays
+                Travel Limited, ATOL 5534, ABTA P7133
+              </p>
+            </article>
+
+            <aside class="why-aside" aria-label="Key benefits">
+              <ul class="benefits" role="list">
+                <li class="benefit">
+                  <span class="benefit-icon" aria-hidden="true">
+                    <img src="img/financial-protection-icon.png" alt="" aria-hidden="true" />
+                  </span>
+                  <div class="benefit-body">
+                    <p class="paragraph-text">
+                      Financial protection - Your money is safe with ABTA's trusted protection and support.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="benefit">
+                  <span class="benefit-icon" aria-hidden="true">
+                    <img src="img/expert-guidance-icon.png" alt="" aria-hidden="true" />
+                  </span>
+                  <div class="benefit-body">
+                    <p class="paragraph-text">Expert guidance - Travel confidently with advice and help whenever you need it.</p>
+                  </div>
+                </li>
+
+                <li class="benefit">
+                  <span class="benefit-icon" aria-hidden="true">
+                    <img src="img/trusted-standards-icon.png" alt="" aria-hidden="true" />
+                  </span>
+                  <div class="benefit-body">
+                    <p class="paragraph-text">Trusted standards - ABTA members follow a strict code of conduct for peace of mind.</p>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="trust-badges" aria-label="Accreditations">
+                <img
+                  class="trust-badge"
+                  src="img/abta-atol-logos.png"
+                  alt="ABTA"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

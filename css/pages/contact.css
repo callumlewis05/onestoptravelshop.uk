@@ -1,0 +1,23 @@
+/* === Contact us section === */
+
+main {
+    padding: 120px 10vw 0 10vw;
+}
+
+/* === Design breakpoints === */
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 10vw;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+}
+
+/* Laptop */
+@media screen and (min-width: 1008px) {
+}
