@@ -1,0 +1,166 @@
+/* === Our Holidays Section === */
+
+.holidays-content {
+  padding: calc(70px + 8vh) 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.holidays-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.holiday-title-text {
+  font-family: "Glook";
+  font-size: clamp(1.2rem, 5vw, 1.5rem);
+  font-weight: 400;
+}
+
+.holidays-info-container .paragraph-text {
+  text-align: center;
+  margin: 0 30px;
+}
+
+.holiday-items {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: clamp(20px, 3vw, 30px);
+  margin: 0 clamp(0px, 5vw, 50px);
+}
+
+.holiday-item {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.holiday-item img {
+  width: auto;
+  object-fit: cover;
+  height: 250px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 5px 0;
+}
+
+.holiday-item-info {
+  padding: 20px;
+}
+
+.holiday-item-info h4,
+.holiday-item-info p {
+  margin: 0;
+}
+
+.holiday-item:nth-of-type(1) {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.holiday-item:nth-of-type(2) {
+  grid-column: 3 / span 2;
+  grid-row: 1;
+}
+
+.holiday-item:nth-of-type(3) {
+  grid-column: 5 / span 2;
+  grid-row: 1;
+}
+
+.holiday-item:nth-of-type(4) {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+}
+
+.holiday-item:nth-of-type(5) {
+  grid-column: 4 / span 2;
+  grid-row: 2;
+}
+
+.section-title {
+  text-align: center;
+}
+
+/* === Design breakpoints === */
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  .holiday-items {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .holiday-item:nth-of-type(1) {
+    grid-column: 1 / span 1;
+    grid-row: 1;
+  }
+
+  .holiday-item:nth-of-type(2) {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+  }
+
+  .holiday-item:nth-of-type(3) {
+    grid-column: 1 / span 1;
+    grid-row: 3;
+  }
+
+  .holiday-item:nth-of-type(4) {
+    grid-column: 1 / span 1;
+    grid-row: 4;
+  }
+
+  .holiday-item:nth-of-type(5) {
+    grid-column: 1 / span 1;
+    grid-row: 5;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+  .holiday-items {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .holiday-item:nth-of-type(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .holiday-item:nth-of-type(2) {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+  }
+
+  .holiday-item:nth-of-type(3) {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .holiday-item:nth-of-type(4) {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+  }
+
+  .holiday-item:nth-of-type(5) {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1008px) {
+}
