@@ -43,6 +43,16 @@
     </header>
 
     <main class="about-content">
+      <div class="mobile-about-info-container">
+        <h2 class="section-title">About us</h2>
+
+        <p class="paragraph-text">
+          At One Stop Travel Shop, we believe travel is more than just reaching
+          a destination, that it is about creating unforgettable experiences
+          that make lifelong memories.
+        </p>
+      </div>
+
       <div class="about-images">
         <img src="img/about/grid-image-1.png" alt="" />
         <img src="img/about/grid-image-2.png" alt="" />
@@ -50,6 +60,47 @@
         <img src="img/about/grid-image-4.png" alt="" />
         <img src="img/about/grid-image-5.png" alt="" />
       </div>
+
+      <div class="slideshow">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <img src="img/about/grid-image-1.png" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="img/about/grid-image-2.png" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="img/about/grid-image-3.png" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="img/about/grid-image-4.png" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="img/about/grid-image-5.png" style="width:100%">
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div class="dots" style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+      </div>
+
       <div class="about-info-container">
         <h2 class="section-title">About us</h2>
 
@@ -71,6 +122,23 @@
           Stop Travel Shop will sort everything for you.
         </p>
       </div>
+
+      <div class="mobile-about-info-container">
+        <p class="paragraph-text">
+          We specialize in crafting personalized holidays tailored to your
+          interests, lifestyle, and budget. Whether you're seeking a relaxing
+          beach escape, a cruise, a cultural city adventure, family holiday or
+          sports event, our expert team is here to guide you every step of the
+          way. One Stop Travel Shop can also arrange holiday extras such as
+          holiday taxis or an airport lounge pass.
+          <br />
+          <br />
+          Relax! You do not need all that stress in looking for a holiday, One
+          Stop Travel Shop will sort everything for you.
+        </p>
+      </div>
     </main>
+
+    <script src="js/about.js"></script>
   </body>
 </html>
