@@ -44,25 +44,60 @@
       <div class="form-container">
         <form action="https://formsubmit.co/contact@callumlewis.uk" method="POST">
           <input type="hidden" name="_template" value="table">
-          <input type="text" name="Name" placeholder="Name*" required>
-          <input type="email" name="Email" placeholder="Email*" required>
-          <input type="tel" name="Contact number" placeholder="Contact number*" required>
-          <select name="Holiday type">
-            <option value="">Holiday type</option>
+
+          <label for="Name">Name<span class="required">*</span></label>
+          <input type="text" name="Name" placeholder="Enter name" class="full-width-input" required>
+
+          <label for="Name">Email<span class="required">*</span></label>
+          <input type="email" name="Email" placeholder="Enter email" class="full-width-input" required>
+
+          <label for="Name">Contact number<span class="required">*</span></label>
+          <input type="tel" name="Contact number" placeholder="Enter contact number" class="full-width-input" required>
+
+          <label for="Holiday type">Holiday type</label>
+          <select name="Holiday type" class="full-width-input">
+            <option value="" disabled selected hidden>Enter holiday type</option>
             <option value="Beach holiday">Beach holiday</option>
             <option value="City break">City break</option>
             <option value="Cruise">Cruise</option>
             <option value="Family holiday">Family holiday</option>
             <option value="Sports break">Sports break</option>
           </select>
-          <input type="number" name="Number of adults" placeholder="Number of adults*" required>
-          <input type="number" name="Number of children" placeholder="Number of children*" required>
-          <input type="date" name="Start date" placeholder="Start date*" required>
-          <input type="date" name="End date" placeholder="End date*" required>
-          <input type="text" name="Preffered destination" placeholder="Preffered destination">
-          <input type="number" name="Approximate holiday budget" placeholder="Approximate holiday budget">
-          <textarea name="Other details" placeholder="Other details"></textarea>
-          <button type="submit">Send</button>
+
+          <div class="half-width-input-container">
+            <div class="input-group">
+              <label for="Name">Number of adults<span class="required">*</span></label>
+              <input type="number" name="Number of adults" placeholder="Enter number of adults" min="0" max="10" required>
+            </div>
+
+            <div class="input-group">
+              <label for="Name">Number of children<span class="required">*</span></label>
+              <input type="number" name="Number of children" placeholder="Enter number of children" min="0" max="10" required>
+            </div>
+          </div>
+
+          <div class="half-width-input-container">
+            <div class="input-group">
+              <label for="Name">Start date<span class="required">*</span></label>
+              <input type="date" name="Start date" required>
+            </div>
+
+            <div class="input-group">
+              <label for="Name">End date<span class="required">*</span></label>
+              <input type="date" name="End date" required>
+            </div>
+          </div>
+
+          <label for="Preffered destination">Preffered destination</label>
+          <input type="text" name="Preffered destination" placeholder="Enter preffered destination" class="full-width-input">
+
+          <label for="Approximate holiday budget (£)">Approximate holiday budget (£)<span class="required">*</span></label>
+          <input type="number" name="Approximate holiday budget (£)" placeholder="Approximate holiday budget in £" min="100" step="100" class="full-width-input" required>
+
+          <label for="Other details">Other details</label>
+          <textarea name="Other details" placeholder="Enter other details" class="full-width-input"></textarea>
+
+          <button type="submit" class="full-width-input submit">Send</button>
         </form>
       </div>
     </main>
