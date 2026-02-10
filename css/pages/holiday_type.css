@@ -1,5 +1,9 @@
 /* === Cruises section === */
 
+p {
+  margin: 0;
+}
+
 .cruises-content {
   padding-top: 80px;
   margin-top: 0;
@@ -34,14 +38,12 @@
   display: block;
 }
 
-.cruises-info-container {
+.info-container {
   height: 100%;
-  padding: 60px 60px 60px 0;
+  margin: 60px 60px 60px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: -15%;
-  background: #f5f3f0;
+  align-items: center;
 }
 
 .section-title {
@@ -49,7 +51,25 @@
   font-weight: 400;
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    var(--brand)
+  ) 1;
+}
+
+.section-title:first-of-type {  
+  margin-left: -20px;
+  align-self: normal;
+  border-image: linear-gradient(
+    to right,
+    transparent 10px,
+    var(--brand) 10px
+  ) 1;
+}
+
+#output {
+  align-self: normal;
 }
 
 .text-line,
@@ -57,17 +77,72 @@
   display: block;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600) {
+.book-now {
+  padding: 5px 20px;
+  color: white;
+  border-radius: 1000px;
+  background-color: var(--brand);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+}
+
+.why-holiday-section {
+  padding: 50px 10vw 100px 10vw;
+}
+
+.reasons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.reason {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.reason img {
+  max-width: 80px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.holiday-title-text {
+  margin: 0;
+}
+
+
+/* === Design breakpoints === */
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  .cruises-info-container {
+    padding: 30px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .paragraph-text {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    height: 35vh;
+  }
+
   .holiday-hero {
     grid-template-columns: 1fr;
-    grid-template-rows: 50% 50%;
-    height: auto;
     min-height: calc(100vh - 80px);
+    height: auto;
   }
 
   .hero-imageInner {
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: none;
   }
 
   .cruises-info-container {
@@ -87,10 +162,48 @@
   .title-line {
     padding-left: 0 !important;
   }
+
+  .reasons-container {
+    grid-template-columns: 1fr;
+  }
+
+  .reason img {
+    max-width: 60px;
+  }
+
+  .book-now {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+  }
+
+  .subtitle-text {
+    margin-bottom: 0;
+  }
+
+  .info-container {
+    margin: 0;
+    padding: 30px;
+  }
+
+  .section-title {
+    margin-left: 0 !important;
+    border-image: linear-gradient(to right, var(--brand)) 1 !important;
+  }
+
+  .holiday-hero .main-image {
+    object-position: 50% 65%;
+  }
 }
 
-@media (max-width: 640px) {
-  .cruises-info-container {
+/* Tablet */
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+  .why-holiday-section {
+    padding: 50px 5vw 100px 5vw;
+  }
+
+    .cruises-info-container {
     padding: 30px 20px;
   }
 
@@ -101,4 +214,69 @@
   .paragraph-text {
     font-size: 1rem;
   }
+
+  .hero-image {
+    height: 45vh;
+  }
+
+  .holiday-hero {
+    grid-template-columns: 1fr;
+    min-height: calc(100vh - 80px);
+    height: auto;
+  }
+
+  .hero-imageInner {
+    clip-path: none;
+  }
+
+  .cruises-info-container {
+    margin-left: 0;
+    padding: 40px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .paragraph-text {
+    font-size: 1.1rem;
+  }
+
+  .text-line,
+  .title-line {
+    padding-left: 0 !important;
+  }
+
+  .reason img {
+    max-width: 60px;
+  }
+
+  .book-now {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+  }
+
+  .subtitle-text {
+    margin-bottom: 0;
+  }
+
+  .info-container {
+    margin: 0;
+    padding: 30px;
+  }
+
+  .section-title {
+    margin-left: 0 !important;
+    border-image: linear-gradient(to right, var(--brand)) 1 !important;
+  }
+
+  .holiday-hero .main-image {
+    object-position: 50% 70%;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1008px) {
 }
