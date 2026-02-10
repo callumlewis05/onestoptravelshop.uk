@@ -44,13 +44,13 @@
       <div class="form-container">
         <form action="https://formsubmit.co/contact@callumlewis.uk" method="POST">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="/thankyou.html">
+          <input type="hidden" name="_next" value="https://onestoptravelshop.uk/thankyou.html">
 
           <label for="Name">Name<span class="required">*</span></label>
-          <input type="text" name="Name" placeholder="Enter name" class="full-width-input" required>
+          <input type="text" name="Name" placeholder="Enter name" class="full-width-input" maxlength="150" required>
 
           <label for="Name">Email<span class="required">*</span></label>
-          <input type="email" name="Email" placeholder="Enter email" class="full-width-input" required>
+          <input type="email" name="Email" placeholder="Enter email" class="full-width-input" maxlength="150" required>
 
           <label for="Name">Contact number<span class="required">*</span></label>
           <input type="tel" name="Contact number" placeholder="Enter contact number" class="full-width-input" required>
@@ -68,12 +68,12 @@
           <div class="half-width-input-container">
             <div class="input-group">
               <label for="Name">Number of adults<span class="required">*</span></label>
-              <input type="number" name="Number of adults" placeholder="Enter number of adults" min="0" max="10" required>
+              <input type="number" name="Number of adults" placeholder="Enter number of adults" min="0" max="20" required>
             </div>
 
             <div class="input-group">
               <label for="Name">Number of children<span class="required">*</span></label>
-              <input type="number" name="Number of children" placeholder="Enter number of children" min="0" max="10" required>
+              <input type="number" name="Number of children" placeholder="Enter number of children" min="0" max="20" required>
             </div>
           </div>
 
@@ -96,7 +96,7 @@
           <input type="number" name="Approximate holiday budget (£)" placeholder="Approximate holiday budget in £" min="100" step="100" class="full-width-input" required>
 
           <label for="Other details">Other details</label>
-          <textarea name="Other details" placeholder="Enter other details" class="full-width-input"></textarea>
+          <textarea name="Other details" placeholder="Enter other details" class="full-width-input" maxlength="2000"></textarea>
 
           <button type="submit" class="full-width-input submit">Send</button>
         </form>
