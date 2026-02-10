@@ -1,17 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>One Stop Travel Shop</title>
-    <meta name="description" content="Relax, let us do the research and find you the best holiday." />
-    <link rel="stylesheet" href="../style.css" />
+    <meta
+      name="description"
+      content="Relax, let us do the research and find you the best holiday."
+    />
+
+    <!-- General css -->
+    <link rel="stylesheet" href="../css/general/reset.css">
+    <link rel="stylesheet" href="../css/general/text.css">
+    <link rel="stylesheet" href="../css/general/header.css">
+
+    <!-- Page specific css -->
+    <link rel="stylesheet" href="../css/pages/holiday_type.css" />
   </head>
 
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="#" aria-label="One Stop Travel Shop, home">
+        <a class="brand" href="/" aria-label="One Stop Travel Shop, home">
           <img
             class="brand-logo"
             src="../img/logo.png"
@@ -24,12 +34,92 @@
         </a>
 
         <nav class="site-nav" aria-label="Primary">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/about.html">About Us</a>
-          <a class="nav-link is-active" href="/holidays.html">Our Holidays</a>
-          <a class="nav-link" href="/contact.html">Contact Us</a>
+          <a class="nav-text" href="/" aria-current="page">Home</a>
+          <a class="nav-text" href="/about.html">About Us</a>
+          <a class="nav-text is-active" href="/holidays.html">Our Holidays</a>
+          <a class="nav-text" href="/contact.html">Contact Us</a>
         </nav>
       </div>
     </header>
+
+    <main class="cruises-content">
+      <section class="holiday-hero">
+        <div class="hero-image">
+          <div class="hero-imageInner">
+            <img
+              class="main-image"
+              src="/img/holidays/beach-holidays/beach-holidays.png"
+              alt="Cruise ship on the ocean"
+              style="object-position: 50% 50%;"
+            />
+          </div>
+        </div>
+
+        <div class="info-container">
+          <h2 class="section-title" id="cruise-title">
+            Beach Holidays
+          </h2>
+
+          <p class="paragraph-text" id="source">
+            There's nothing quite like the feeling of soft sand between your
+            toes and the sound of gentle waves in the background. Our
+            beach holidays are designed to help you unwind, recharge, and
+            create those unforgettable seaside memories. 
+            <br><br>
+            Whether you're dreaming of a tropical island escape, a
+            Mediterranean hideaway, or a lively coastal resort with
+            plenty to do, we'll help you find the perfect spot to soak
+            up the sun. Picture lazy mornings by the water, afternoons
+            filled with paddleboarding or beach volleyball, and
+            evenings spent watching the sunset with a cool drink in
+            hand. From beachfront villas to all-inclusive resorts, you
+            can count on us to make your seaside getaway as effortless
+            as it is enjoyable.
+          </p>
+
+          <div id="output"></div>
+
+          <button class="book-now"><h3 class="subtitle-text"><a href="/contact.html">Book now!</a></h3></button>
+        </div>
+      </section>
+    </main>
+
+    <section class="why-holiday-section">
+      <h2 class="section-title" id="cruise-title">
+        Why Choose a Beach Holiday?
+      </h2>
+
+      <div class="reasons-container">
+        <div class="reason">
+          <img src="/img/holidays/beach-holidays/icon-1.png" alt="">
+          <div class="reason-text">
+            <h3 class="holiday-title-text">Relaxing Seaside Atmostphere</h3>
+            <p class="paragraph-text">Unwind on sandy shores with the soothing sounds of the ocean and gentle sea breeze.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <img src="/img/holidays/beach-holidays/icon-2.png" alt="">
+          <div class="reason-text">
+            <h3 class="holiday-title-text">Ideal for All Ages</h3>
+            <p class="paragraph-text">Perfect for families, couples, and solo travellers seeking fun and relaxation.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <img src="/img/holidays/beach-holidays/icon-3.png" alt="">
+          <div class="reason-text">
+            <h3 class="holiday-title-text">Beautiful Natural Scenery</h3>
+            <p class="paragraph-text">Enjoy stunning views of turquoise waters, golden sands, and lush tropical landscapes.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <img src="/img/holidays/beach-holidays/icon-4.png" alt="">
+          <div class="reason-text">
+            <h3 class="holiday-title-text">Endless Activities</h3>
+            <p class="paragraph-text">Swim, snorkel, sunbathe, or take part in water sports and beach games.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/js/holiday_type.js"></script>
   </body>
 </html>
