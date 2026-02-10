@@ -113,8 +113,8 @@
 }
 
 .benefit-icon {
-  height: 100%;
-  width: 100px;
+  width: 70px;
+  aspect-ratio: 1;
   border-radius: 12px;
   display: grid;
   place-items: center;
