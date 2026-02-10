@@ -1,17 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>One Stop Travel Shop</title>
-    <meta name="description" content="Relax, let us do the research and find you the best holiday." />
-    <link rel="stylesheet" href="../style.css" />
+    <meta
+      name="description"
+      content="Relax, let us do the research and find you the best holiday."
+    />
+
+    <!-- General css -->
+    <link rel="stylesheet" href="../css/general/reset.css">
+    <link rel="stylesheet" href="../css/general/text.css">
+    <link rel="stylesheet" href="../css/general/header.css">
+
+    <!-- Page specific css -->
+    <link rel="stylesheet" href="../css/pages/holiday_type.css" />
   </head>
 
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="#" aria-label="One Stop Travel Shop, home">
+        <a class="brand" href="/" aria-label="One Stop Travel Shop, home">
           <img
             class="brand-logo"
             src="../img/logo.png"
@@ -24,12 +34,105 @@
         </a>
 
         <nav class="site-nav" aria-label="Primary">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/about.html">About Us</a>
-          <a class="nav-link is-active" href="/holidays.html">Our Holidays</a>
-          <a class="nav-link" href="/contact.html">Contact Us</a>
+          <a class="nav-text" href="/" aria-current="page">Home</a>
+          <a class="nav-text" href="/about.html">About Us</a>
+          <a class="nav-text is-active" href="/holidays.html">Our Holidays</a>
+          <a class="nav-text" href="/contact.html">Contact Us</a>
         </nav>
       </div>
     </header>
+
+    <main class="cruises-content">
+      <section class="holiday-hero">
+        <div class="hero-image">
+          <div class="hero-imageInner">
+            <img
+              class="main-image"
+              src="../img/holidays/"
+.png              alt="Cruise ship on the ocean"
+            />
+          </div>
+        </div>
+
+        <div class="info-container">
+          <h2 class="section-title" id="cruise-title">
+            Cruises
+          </h2>
+
+          <p class="paragraph-text" id="source">
+            Set sail on the adventure of a lifetime with a cruise holiday that 
+            blends relaxation, exploration, and world-class service. Wake up 
+            each morning to a new horizon - whether it's the sun-drenched 
+            beaches of the Caribbean or the breath taking fjords of Norway, 
+            onboard you'll find everything from live 
+            entertainment to luxurious spas and exciting activities for all 
+            ages, ensuring there's never a dull moment.
+            <br><br>
+            Cruises offer the perfect balance of comfort and discovery: 
+            unpack once and let your floating resort take you from 
+            one stunning destination to the next. Whether you're 
+            looking for a romantic getaway, a family-friendly 
+            adventure, or a solo escape, there's a cruise to match 
+            your style.
+          </p>
+
+          <div id="output"></div>
+
+          <button class="book-now"><h3 class="subtitle-text"><a href="/contact.html">Book now!</a></h3></button>
+        </div>
+      </section>
+    </main>
+
+    <section class="why-holiday-section">
+      <h2 class="section-title" id="cruise-title">
+        Why Choose a Cruise?
+      </h2>
+
+      <div class="reasons-container">
+        <div class="reason">
+          <img src="/img/holidays/cruises-icon-1.png" alt="">
+          <div class="reason-text">
+            <h3 class="holiday-title-text">See More, Unpack Once</h3>
+            <p class="paragraph-text">Wake up in a new destination every day without the hassle of constant travel or hotel changes.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <img src="/img/holidays/cruises-icon-2.png" alt="">
+          <div class="reason-text">
+            <h3 class="holiday-title-text">Stress-Free Travel</h3>
+            <p class="paragraph-text">No airport hopping or long road trips. Simply board, relax, and let the ship take you to your destinations.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <img src="/img/holidays/cruises-icon-3.png" alt="">
+          <div class="reason-text">
+            <h3 class="holiday-title-text">All-Inclusive Value</h3>
+            <p class="paragraph-text">Meals, entertainment, and accommodation included - often with extras like drinks or onboard credit.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <img src="/img/holidays/cruises-icon-4.png" alt="">
+          <div class="reason-text">
+            <h3 class="holiday-title-text">Perfect for All Travellers</h3>
+            <p class="paragraph-text">Romantic escapes for couples, family fun with kids, solo travel made easy or luxury for special occasions.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <img src="/img/holidays/cruises-icon-5.png" alt="">
+          <div class="reason-text">
+            <h3 class="holiday-title-text">Entertainment for Everyone</h3>
+            <p class="paragraph-text">Broadway-style shows, kids’ clubs, spa treatments, pools and nightlife - something for every age.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <img src="/img/holidays/cruises-icon-6.png" alt="">
+          <div class="reason-text">
+            <h3 class="holiday-title-text">Extraordinary Experiences</h3>
+            <p class="paragraph-text">From Caribbean beaches to European cities to scenic river cruises - cruises give the opportunity for amazing experiences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/js/holiday_type.js"></script>
   </body>
 </html>
