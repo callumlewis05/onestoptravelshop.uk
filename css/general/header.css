@@ -5,8 +5,8 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
+  z-index: 100;
+  background: #fefefe;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   height: 80px;
@@ -19,6 +19,7 @@
   gap: 1.25rem;
   height: 100%;
   margin: 0 30px;
+  background-color: #fefefe;
 }
 
 .brand-logo {
@@ -32,4 +33,69 @@
   justify-content: flex-end;
   gap: clamp(0.6rem, 1.2vw, 1.4rem);
   align-items: center;
+}
+
+.mobile-menu-icon {
+  width: 40px;
+  height: 40px;
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+  transition: transform ease-in-out .4s;
+}
+
+.visible {
+    transform: translateY(0) !important;
+}
+
+/* === Design breakpoints === */
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  .site-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 10px 30px;
+    margin-top: 80px;
+    transform: translateY(-100%);
+  }
+
+  .mobile-nav a {
+    display: block;
+    padding-top: 10px;
+    border: none;
+  }
+
+  .mobile-nav :not(a:last-child) {
+    display: block;
+    border-bottom: solid 1px darkgrey;
+    padding-bottom: 10px;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+}
+
+/* Laptop */
+@media screen and (min-width: 1008px) {
 }
