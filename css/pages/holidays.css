@@ -93,6 +93,10 @@
   text-align: center;
 }
 
+.read-more {
+  color: #888888;
+}
+
 /* === Design breakpoints === */
 
 /* Mobile */
