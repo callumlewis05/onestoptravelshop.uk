@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/general/reset.css">
     <link rel="stylesheet" href="css/general/text.css">
     <link rel="stylesheet" href="css/general/header.css">
+    <link rel="stylesheet" href="css/general/footer.css">
 
     <!-- Page specific css -->
     <link rel="stylesheet" href="css/pages/about.css" />
@@ -151,6 +152,98 @@
         </p>
       </div>
     </main>
+
+    <footer class="site-footer" aria-label="Site footer">
+        <!-- Social / contact links -->
+        <div class="footer-socials">
+          <span class="footer-socials-label">Get in touch</span>
+          <div class="socials-row">
+            <!-- Facebook -->
+            <a
+              class="social-link"
+              href="https://www.facebook.com/people/One-Stop-Travel-Shop/61577239299601/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="One Stop Travel Shop on Facebook"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                />
+              </svg>
+            </a>
+
+            <!-- Phone -->
+            <a
+              class="social-link"
+              href="tel:+447785187289"
+              aria-label="Call us on +44 7785 187289"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+
+            <!-- Email -->
+            <a
+              class="social-link"
+              href="mailto:onestoptravelshop@myyahoo.com"
+              aria-label="Email us at onestoptravelshop@myyahoo.com"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+                />
+                <path
+                  d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-legal">
+          &copy; <span id="footer-year"></span> One Stop Travel Shop. All rights
+          reserved. &nbsp;·&nbsp; ABTA P7133 &nbsp;·&nbsp; ATOL 5534
+        </p>
+        <p class="footer-credit">
+          Site by
+          <a
+            href="https://callumlewis.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Callum Lewis</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+    </script>
 
     <script src="js/about.js"></script>
     <script src="js/home.js"></script>
