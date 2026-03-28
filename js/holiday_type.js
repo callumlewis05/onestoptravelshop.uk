@@ -6,6 +6,34 @@ function isLaptop() {
 }
 
 /* ================================
+   Tokenize a node recursively
+   ================================ */
+function tokenizeNode(node, tokens) {
+  if (node.nodeType === Node.TEXT_NODE) {
+    node.textContent
+      .trim()
+      .split(/\s+/)
+      .forEach(word => {
+        if (word) tokens.push({ type: "word", value: word, tag: null });
+      });
+  } else if (node.nodeName === "BR") {
+    tokens.push({ type: "break" });
+  } else if (node.nodeType === Node.ELEMENT_NODE) {
+    const tag = node.nodeName.toLowerCase();
+    node.childNodes.forEach(child => {
+      if (child.nodeType === Node.TEXT_NODE) {
+        child.textContent
+          .trim()
+          .split(/\s+/)
+          .forEach(word => {
+            if (word) tokens.push({ type: "word", value: word, tag });
+          });
+      }
+    });
+  }
+}
+
+/* ================================
    Recreate source paragraph
    ================================ */
 function recreateSource() {
@@ -33,7 +61,7 @@ function recreateSource() {
    ================================ */
 function resetToMobileView() {
   const output = document.getElementById("output");
-  output.classList.add("paragraph-text")
+  output.classList.add("paragraph-text");
   if (!output || !output.dataset.originalText) return;
 
   // Remove any source element
@@ -42,6 +70,31 @@ function resetToMobileView() {
 
   // Restore original HTML to output
   output.innerHTML = output.dataset.originalText;
+}
+
+/* ================================
+   Helper to append a word to a line
+   ================================ */
+function appendWord(line, token) {
+  if (token.tag) {
+    // If the last child is already the same tag, append to it
+    const last = line.lastChild;
+    if (last && last.nodeName.toLowerCase() === token.tag) {
+      last.textContent += token.span.querySelector(token.tag).textContent;
+    } else {
+      const el = document.createElement(token.tag);
+      el.textContent = token.span.querySelector(token.tag).textContent;
+      line.appendChild(el);
+    }
+  } else {
+    // Plain text — append to a trailing text node if possible
+    const last = line.lastChild;
+    if (last && last.nodeType === Node.TEXT_NODE) {
+      last.textContent += token.span.textContent;
+    } else {
+      line.appendChild(document.createTextNode(token.span.textContent));
+    }
+  }
 }
 
 /* ================================
@@ -63,19 +116,7 @@ function splitParagraph() {
 
   /* -------- Tokenize text -------- */
   const tokens = [];
-  source.childNodes.forEach(node => {
-    if (node.nodeType === Node.TEXT_NODE) {
-      node.textContent
-        .trim()
-        .split(/\s+/)
-        .forEach(word => {
-          if (word) tokens.push({ type: "word", value: word });
-        });
-    }
-    if (node.nodeName === "BR") {
-      tokens.push({ type: "break" });
-    }
-  });
+  source.childNodes.forEach(node => tokenizeNode(node, tokens));
 
   // Clear source for measuring
   source.textContent = "";
@@ -83,7 +124,13 @@ function splitParagraph() {
   const spans = tokens.map(token => {
     if (token.type === "word") {
       const span = document.createElement("span");
-      span.textContent = token.value + " ";
+      if (token.tag) {
+        const inner = document.createElement(token.tag);
+        inner.textContent = token.value + " ";
+        span.appendChild(inner);
+      } else {
+        span.textContent = token.value + " ";
+      }
       source.appendChild(span);
       return { ...token, span };
     }
@@ -110,7 +157,7 @@ function splitParagraph() {
     const offsetSize = (
       (rect.height * window.innerWidth * 0.075) / window.innerHeight
     );
-    console.log(rect.height); // ✅ NOT 0
+    console.log(rect.height);
     // Clean up temp content
     p.textContent = "";
     p.style.marginLeft = `${(currentLine - 1) * offsetSize}px`;
@@ -121,9 +168,7 @@ function splitParagraph() {
   /* -------- Build lines -------- */
   spans.forEach(token => {
     if (token.type === "break") {
-      const line = output.querySelector(
-        `p:nth-of-type(${currentLine})`
-      );
+      const line = output.querySelector(`p:nth-of-type(${currentLine})`);
       line.style.display = "block";
       currentLine += 1;
       addParagraph(true);
@@ -135,22 +180,18 @@ function splitParagraph() {
     if (!rect) return;
 
     const wordWidth = rect.width;
-    let line = output.querySelector(
-      `p:nth-of-type(${currentLine})`
-    );
+    let line = output.querySelector(`p:nth-of-type(${currentLine})`);
     const lineWidth = line.getBoundingClientRect().width;
     const newLineWidth = lineWidth + wordWidth + (currentLine - 1) * 4;
 
     if (newLineWidth < maxLineWidth) {
-      line.textContent += span.textContent;
+      appendWord(line, token);
     } else {
       line.style.display = "block";
       currentLine += 1;
       addParagraph();
-      line = output.querySelector(
-        `p:nth-of-type(${currentLine})`
-      );
-      line.textContent += span.textContent;
+      line = output.querySelector(`p:nth-of-type(${currentLine})`);
+      appendWord(line, token);
     }
   });
 
